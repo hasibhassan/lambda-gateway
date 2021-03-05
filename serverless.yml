@@ -4,7 +4,7 @@ provider:
   name: aws
   runtime: nodejs14.x
   iam:
-    role: ${opt:role}
+    role: ${{ secrets.SERVERLESS_ROLE }}
 
 functions:
   demo:
