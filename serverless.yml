@@ -7,7 +7,3 @@ provider:
 functions:
   demo:
     handler: handler.hello
-    events:
-      - httpApi:
-          path: /users/make
-          method: get
