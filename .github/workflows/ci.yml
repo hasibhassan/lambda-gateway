@@ -20,6 +20,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1
-      - uses: serverless/github-action@master
-        with:
-          args: deploy --conceal
+      - run: npm install -g serverless
+      - run: sls deploy --conceal

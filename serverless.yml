@@ -9,5 +9,5 @@ functions:
     handler: handler.hello
     events:
       - httpApi:
-          path: /users/create
+          path: /users/make
           method: get

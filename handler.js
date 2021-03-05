@@ -5,7 +5,7 @@ module.exports.hello = async (event) => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'Github and serverless framework works!',
+        message: 'sls framework is awesome!',
         input: event,
       },
       null,
