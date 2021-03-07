@@ -5,7 +5,7 @@ module.exports.hello = async (event) => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'hello from sls framework v2!',
+        message: 'hello from sls framework v3!',
         input: event,
       },
       null,
