@@ -21,9 +21,9 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1
       - run: npm i -g serverless
-      - run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
-        working-directory: ./sls_1/serverless.yml
-      - run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
-        working-directory: ./sls_2/serverless.yml
-      - run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
-        working-directory: ./sls_3/serverless.yml
+      - working-directory: ./sls_1/serverless.yml
+        run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
+      - working-directory: ./sls_2/serverless.yml
+        run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
+      - working-directory: ./sls_3/serverless.yml
+        run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
