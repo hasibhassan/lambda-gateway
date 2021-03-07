@@ -1,4 +1,4 @@
-service: lambdagateway
+service: lambdagateway_2
 
 provider:
   name: aws
@@ -7,7 +7,7 @@ provider:
     role: ${opt:aws_arn}
 
 functions:
-  demo:
-    handler: handler.hello
+  demo_2:
+    handler: handler.hi
     events:
-      - http: GET hello
+      - httpApi: 'GET /hi'

@@ -1,0 +1,23 @@
+service: lambdagateway_3
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  iam:
+    role: ${opt:aws_arn}
+
+resources:
+  Resources:
+    demoTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: demoName
+            AttributeType: D
+        TableName: ${self:provider.name}
+        KeySchema:
+          - AttributeName: demoName
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

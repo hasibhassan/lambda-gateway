@@ -1,0 +1,13 @@
+service: lambdagateway_1
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  iam:
+    role: ${opt:aws_arn}
+
+functions:
+  demo:
+    handler: handler.hello
+    events:
+      - http: GET hello
