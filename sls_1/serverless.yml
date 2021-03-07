@@ -1,4 +1,4 @@
-service: lambdagateway_1
+service: lambdagateway1
 
 provider:
   name: aws
