@@ -13,7 +13,7 @@ resources:
       Properties:
         AttributeDefinitions:
           - AttributeName: demoName
-            AttributeType: D
+            AttributeType: S
         TableName: ${self:provider.name}
         KeySchema:
           - AttributeName: demoName
