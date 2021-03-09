@@ -3,7 +3,7 @@ export async function hello(event) {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'hello from sls_1 framework v4!',
+        message: 'hello from sls_1 framework v5',
         input: event,
       },
       null,
