@@ -8,4 +8,4 @@ provider:
 
 functions:
   demo:
-    handler: handler.hello
+    handler: import hello from './handler.js'
