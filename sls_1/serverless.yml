@@ -9,5 +9,3 @@ provider:
 functions:
   demo:
     handler: handler.hello
-    events:
-      - http: GET hello

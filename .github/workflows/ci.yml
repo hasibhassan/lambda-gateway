@@ -22,8 +22,4 @@ jobs:
           aws-region: us-east-1
       - run: npm i -g serverless
       - working-directory: ./sls_1
-        run: sls remove --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
-      - working-directory: ./sls_2
-        run: sls remove --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
-      - working-directory: ./sls_3
-        run: sls remove --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
+        run: sls deploy --aws_arn ${{ secrets.SERVERLESS_ROLE }} --conceal
