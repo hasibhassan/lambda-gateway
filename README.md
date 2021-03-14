@@ -13,7 +13,7 @@ sls deploy
 
 ## Architecture
 
-[Lucidchart](https://lucid.app/documents/view/b8302259-4f8a-4bb4-b2e0-55d26e69322d)
+<https://lucid.app/documents/view/b8302259-4f8a-4bb4-b2e0-55d26e69322d>
 
 ## Contributing
 

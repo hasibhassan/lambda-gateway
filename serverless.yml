@@ -1,0 +1,23 @@
+service: lambdagateway1
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  iam:
+    role: ${opt:aws_arn}
+
+custom:
+  webpack:
+    includeModules: true
+     forceExcludes:
+      - aws-sdk
+
+package:
+  individually: true
+
+functions:
+  demo:
+    handler: handlers/index.hello

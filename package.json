@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "semver": "^7.3.4",
+    "serverless": "^2.29.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
+    "serverless-webpack": "^5.3.5",
+    "webpack": "^5.25.0"
+  }
+}
