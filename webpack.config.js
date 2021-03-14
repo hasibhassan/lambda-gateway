@@ -19,12 +19,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  { targets: { node: '12', useBuiltIns: 'usage' } },
-                ],
-              ],
+              presets: [['@babel/preset-env', { targets: { node: '12' } }]],
             },
           },
         ],
