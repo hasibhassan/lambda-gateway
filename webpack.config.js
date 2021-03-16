@@ -14,13 +14,22 @@ module.exports = {
   module: {
     rules: [
       {
-        include: __dirname,
+        test: /.js$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: [['@babel/preset-env', { targets: { node: '12' } }]],
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    targets: { node: '12' },
+                    useBuiltIns: 'usage',
+                    corejs: '3.9',
+                  },
+                ],
+              ],
             },
           },
         ],
