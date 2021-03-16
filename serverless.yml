@@ -1,6 +1,7 @@
 service: lambdagateway1
 
 plugins:
+  - serverless-plugin-datadog
   - serverless-webpack
 
 provider:
@@ -10,8 +11,14 @@ provider:
     role: ${opt:aws_arn}
 
 custom:
+  datadog:
+    forwarder: ${opt:dd_arn}
   webpack:
-    includeModules: true
+    includeModules:
+      forceExclude:
+        - dd-trace
+        - datadog-lambda-js
+        - aws-sdk
 
 package:
   individually: true

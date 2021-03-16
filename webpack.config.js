@@ -1,4 +1,6 @@
 const slsw = require('serverless-webpack')
+const nodeExternals = require('webpack-node-externals')
+
 module.exports = {
   entry: slsw.lib.entries,
   target: 'node',
@@ -10,6 +12,7 @@ module.exports = {
   performance: {
     hints: false,
   },
+  externals: [nodeExternals(), 'dd-trace', 'datadog-lambda-js'],
   module: {
     rules: [
       {
