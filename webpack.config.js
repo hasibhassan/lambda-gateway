@@ -12,7 +12,7 @@ module.exports = {
   performance: {
     hints: false,
   },
-  externals: [nodeExternals(), 'dd-trace', 'datadog-lambda-js'],
+  externals: [nodeExternals(), 'dd-trace', 'datadog-lambda-js', 'aws-sdk'],
   module: {
     rules: [
       {
