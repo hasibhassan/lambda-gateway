@@ -15,10 +15,6 @@ custom:
     forwarder: ${opt:dd_arn}
   webpack:
     includeModules: false
-        forceExclude:
-          - dd-trace
-          - datadog-lambda-js
-          - aws-sdk
 
 package:
   individually: true
