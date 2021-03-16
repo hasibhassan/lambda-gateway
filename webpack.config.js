@@ -4,8 +4,9 @@ module.exports = {
   entry: slsw.lib.entries,
   target: 'node',
   mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
+  devtool: 'source-map',
   optimization: {
-    minimize: true,
+    minimize: false,
   },
   performance: {
     hints: false,
