@@ -3,7 +3,7 @@ export const hello = async (event) => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'hello from sls framework v6',
+        message: 'hello from sls framework v7',
         input: event,
       },
       null,

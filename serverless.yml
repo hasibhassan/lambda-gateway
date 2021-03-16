@@ -14,7 +14,7 @@ custom:
   datadog:
     forwarder: ${opt:dd_arn}
   webpack:
-    includeModules:
+    includeModules: false
       forceExclude:
         - dd-trace
         - datadog-lambda-js

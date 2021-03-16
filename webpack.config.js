@@ -2,11 +2,10 @@ const slsw = require('serverless-webpack')
 
 module.exports = {
   entry: slsw.lib.entries,
-  target: 'node',
+  externalPresets: { node: true },
   mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
-  devtool: 'source-map',
   optimization: {
-    minimize: false,
+    minimize: true,
   },
   performance: {
     hints: false,
